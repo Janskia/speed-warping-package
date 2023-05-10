@@ -21,7 +21,6 @@ namespace Janskia.SpeedWarping
         [SerializeField] private float handWeight = 0.3f;
         [Range(-1f, 1f)]
         [SerializeField] private float hipJump = -0.15f;
-        [SerializeField] private bool scaleSpreadByScale = true;
         [SerializeField] private Vector3 legsOriginOffset = new Vector3(-0.4f, 0.2f, 0f);
 
         [Header("Value")]
@@ -42,14 +41,7 @@ namespace Janskia.SpeedWarping
         {
             get
             {
-                if (scaleSpreadByScale)
-                {
-                    return Spread / transform.localScale.z;
-                }
-                else
-                {
-                    return Spread;
-                }
+                return Spread / transform.localScale.z;
             }
         }
 
