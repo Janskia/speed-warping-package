@@ -24,7 +24,7 @@ Feet and hand positions are grabbed from the animation, modified according to `S
 7. Update desired movement speed using `SpeedWarping.Spread` from your code.
 8. [optional] Set custom `LegsOrigin` (explained below)
 
-### Custom Legs Origin ###
+### Custom legs origin ###
 
 `LegsOrigin` is center point around which legs rotate used in calculations of final feet destination. By default legs origin is set to hips transform of the model. This seems correct, however if position of this point is slightly ofset, you can alter front and back leg shape in final pose and likely get nicer results.
 
