@@ -21,8 +21,8 @@ Feet and hand positions are grabbed from the animation, modified according to `S
 
 ![Alt text](/Documentation~/SpeedWarpingComponent.png?raw=true)
 
-6. Update desired movement speed using `SpeedWarping.Spread` from your code.
-7. [optional] Set custom `LegsOrigin` (explained below)
+7. Update desired movement speed using `SpeedWarping.Spread` from your code.
+8. [optional] Set custom `LegsOrigin` (explained below)
 
 ### Custom Legs Origin ###
 
