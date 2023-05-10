@@ -8,14 +8,14 @@ It's a little plugin that allows you to dynamically stretch step length in human
 
 ### How it works ###
 
-Feet and hand positions are grabbed from the animation, modified according to `SpeedWarping.Spread` parameter and updated position are applied back to the model using IK.
+Feet and hand positions are grabbed from the animation, modified according to `SpeedWarping.Spread` parameter and calculated positions are applied back to the model using IK.
 
 ### Usage guide ###
 
 1. Import the package via Package Manager using git URL: https://github.com/Janskia/speed-warping-package.git
 2. Setup your character model's Rig Animation Type to 'Humanoid'.
 3. Setup `Animator` on the character to your liking. Attach avatar. Have some running/walking animation.
-4. Attach `SpeedWarping` component to the root game object of your character (this game object should also have `Animator` component on it).
+4. Attach `SpeedWarping` component to the root game object of your character (this game object should have `Animator` component on it).
 5. Verify if model parts transforms were automatically set up properly (it requires correct avatar set up in `Animator`). If it didn't work for some reason, you'll have to attach model parts transforms manually.
 
 ![Alt text](/Documentation/SpeedWarpingComponent.png?raw=true)
