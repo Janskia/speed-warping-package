@@ -27,7 +27,7 @@ Feet and hand positions are grabbed from the animation, modified according to `S
 
 ### Custom Legs Origin ###
 
-LegsOrigin is center point around which legs rotate (hips), used in calculations of final feet destination. By default legs origin is set to hips transform of the model. This is correct, however if position of this point is slightly ofset, you can alter legs shape in final pose and likely get nicer results.
+LegsOrigin is center point around which legs rotate (hips), used in calculations of final feet destination. By default legs origin is set to hips transform of the model. This seems correct, however if position of this point is slightly ofset, you can alter legs shape in final pose and likely get nicer results.
 
 In order to do this:
 1. Add empty game object.
