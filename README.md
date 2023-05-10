@@ -14,13 +14,13 @@ It's a little speed warping plugin that allows you to dynamically scale step len
 
 ![Alt text](/Documentation/AnimationType.png?raw=true)
 
-3. Attach 'SpeedWarping' component to the root game object of your character (this game object should also have 'Animator' component on it).
-4. Verify if model parts transforms were automatically set up properly (it requires correct avatar set up in 'Animator'). If it didn't work for some reason, you'll have to attach model parts transforms manually.
+3. Attach `SpeedWarping` component to the root game object of your character (this game object should also have `Animator` component on it).
+4. Verify if model parts transforms were automatically set up properly (it requires correct avatar set up in `Animator`). If it didn't work for some reason, you'll have to attach model parts transforms manually.
 
 ![Alt text](/Documentation/SpeedWarpingComponent.png?raw=true)
 
-5. Update desired movement speed using 'SpeedWarping.Spread' property from your code.
-6. Set custom 'LegsOrigin' (this step is optional, explained below)
+5. Update desired movement speed using `SpeedWarping.Spread` property from your code.
+6. Set custom `LegsOrigin` (this step is optional, explained below)
 
 ### Custom Legs Origin ###
 
