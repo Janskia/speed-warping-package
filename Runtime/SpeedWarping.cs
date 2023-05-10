@@ -24,8 +24,8 @@ namespace Janskia.SpeedWarping
         [SerializeField] private Vector3 legsOriginOffset = new Vector3(-0.4f, 0.2f, 0f);
 
         [Header("Value")]
-        [Range(0f, 5f)]
-        [SerializeField] public float Spread;
+        [Range(0f, 2f)]
+        [SerializeField] public float Spread = 1f;
 
         private Animator animator;
 
