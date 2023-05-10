@@ -4,13 +4,14 @@
   "displayName": "Speed Warping",
   "description": "Simple plugin for stretching steps in walk/run animations",
   "unity": "2021.3",
-  "documentationUrl": "https://github.com/Janskia/speed-warping",
- "keywords": [
+  "documentationUrl": "https://github.com/Janskia/speed-warping-package/",
+  "license": "See LICENSE.md",
+  "keywords": [
     "animation"
   ],
   "author": {
     "name": "Adam Jański",
     "email": "janski.adam@gmail.com",
-    "url": ""
+    "url": "https://github.com/Janskia/"
   }
 }
