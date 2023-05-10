@@ -92,7 +92,6 @@ public class SpeedWarping : MonoBehaviour
 
     private void OnAnimatorIK(int layerIndex)
     {
-        DebugGizmos.Clear();
         Vector3 hipJumpOffset = Vector3.up * Mathf.Max(0, ScaledSpread - 1) * hipJump * transform.InverseTransformPoint(leftFoot.position).z * transform.InverseTransformPoint(rightFoot.position).z * transform.localScale.z;
 
         animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, footWeight);
@@ -108,11 +107,6 @@ public class SpeedWarping : MonoBehaviour
         ProcessLimb(AvatarIKGoal.RightHand, rightHand.position + hipJumpOffset, rightShoulder.position + hipJumpOffset);
 
         animator.bodyPosition = animator.bodyPosition + hipJumpOffset;
-
-        DebugGizmos.DrawWireSphere(leftFoot.position, Color.red);
-        DebugGizmos.DrawWireSphere(LegsOrigin, new Color(1, 1, 1, 0.5f), (LegsOrigin - leftFoot.position).magnitude);
-        DebugGizmos.DrawWireSphere(rightFoot.position, Color.red);
-        DebugGizmos.DrawWireSphere(LegsOrigin, new Color(1, 1, 1, 0.5f), (LegsOrigin - rightFoot.position).magnitude);
     }
 
     private void ProcessLimb(AvatarIKGoal ikGoal, Vector3 limbPosition, Vector3 origin)
@@ -122,16 +116,12 @@ public class SpeedWarping : MonoBehaviour
 
         Vector3 scaledPosition = new Vector3(localLimbPosition.x, localLimbPosition.y, localLimbPosition.z * ScaledSpread);
 
-        DebugGizmos.DrawSphere(transform.InverseTransformPoint(scaledPosition), Color.magenta);
-
         Vector3 legVector = localLimbPosition - localOrigin;
         float legLength = legVector.magnitude;
         Vector3 newVector = scaledPosition - localOrigin;
         float newLength = newVector.magnitude;
         Vector3 finalPosition = Vector3.Lerp(localOrigin, scaledPosition, legLength / newLength);
         finalPosition = transform.TransformPoint(finalPosition);
-
-        DebugGizmos.DrawSphere(finalPosition, Color.blue);
 
         animator.SetIKPosition(ikGoal, finalPosition);
     }
