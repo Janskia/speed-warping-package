@@ -8,7 +8,7 @@ It's a little plugin that allows you to dynamically stretch step length in human
 
 ### How it works ###
 
-Feet and hand positions are grabbed from the animation, modified according to `SpeedWarping.Spread` parameter and updated position are applied back to the model using IK.
+Feet and hand positions are grabbed from the animation, modified according to `SpeedWarping.Spread` parameter and calculated position are applied back to the model using IK.
 
 ### Usage guide ###
 
