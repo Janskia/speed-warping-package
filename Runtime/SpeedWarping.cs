@@ -19,8 +19,8 @@ namespace Janskia.SpeedWarping
         [SerializeField] private float footWeight = 1f;
         [Range(0f, 1f)]
         [SerializeField] private float handWeight = 0.3f;
-        [Range(-1f, 1f)]
-        [SerializeField] private float hipJump = -0.15f;
+        [Range(0f, 1f)]
+        [SerializeField] private float hipJump = 0.15f;
         [SerializeField] private Vector3 legsOriginOffset = new Vector3(-0.4f, 0.2f, 0f);
 
         [Header("Value")]
@@ -29,7 +29,7 @@ namespace Janskia.SpeedWarping
 
         private Animator animator;
 
-        private Vector3 LegsOrigin
+        private Vector3 LegsOriginWithOffset
         {
             get
             {
@@ -86,13 +86,13 @@ namespace Janskia.SpeedWarping
 
         private void OnAnimatorIK(int layerIndex)
         {
-            Vector3 hipJumpOffset = Vector3.up * Mathf.Max(0, ScaledSpread - 1) * hipJump * transform.InverseTransformPoint(leftFoot.position).z * transform.InverseTransformPoint(rightFoot.position).z * transform.localScale.z;
+            Vector3 hipJumpOffset = Vector3.up * Mathf.Max(0, ScaledSpread - 1) * -hipJump * transform.InverseTransformPoint(leftFoot.position).z * transform.InverseTransformPoint(rightFoot.position).z * transform.localScale.z;
 
             animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, footWeight);
-            ProcessLimb(AvatarIKGoal.LeftFoot, leftFoot.position + hipJumpOffset, LegsOrigin + hipJumpOffset);
+            ProcessLimb(AvatarIKGoal.LeftFoot, leftFoot.position + hipJumpOffset, LegsOriginWithOffset + hipJumpOffset);
 
             animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, footWeight);
-            ProcessLimb(AvatarIKGoal.RightFoot, rightFoot.position + hipJumpOffset, LegsOrigin + hipJumpOffset);
+            ProcessLimb(AvatarIKGoal.RightFoot, rightFoot.position + hipJumpOffset, LegsOriginWithOffset + hipJumpOffset);
 
             animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, handWeight);
             ProcessLimb(AvatarIKGoal.LeftHand, leftHand.position + hipJumpOffset, leftShoulder.position + hipJumpOffset);
