@@ -9,7 +9,7 @@ It's a little speed warping plugin that allows you to dynamically scale step len
 
 ### Usage guide ###
 
-1. Import 'SpeedWarping.cs' script to your project. 
+1. Import the package via Package Manager using git URL: https://github.com/Janskia/speed-warping-package.git
 2. Setup your character model's Rig Animation Type to 'Humanoid'.
 
 ![Alt text](/Documentation/AnimationType.png?raw=true)
