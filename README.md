@@ -15,7 +15,7 @@ Feet and hand positions are grabbed from the animation, modified according to `S
 1. Import the package via Package Manager using git URL: https://github.com/Janskia/speed-warping-package.git
 2. Setup your character model's Rig Animation Type to 'Humanoid'.
 3. Setup `Animator` on the character to your liking. Attach avatar. Have some running/walking animation.
-4. Enable `IK Pass` in `Animator's` Layer settings.
+4. Enable `IK Pass` in animator's layer settings.
 5. Attach `SpeedWarping` component to the root game object of your character (this game object should have `Animator` component on it).
 6. Verify if model parts transforms were automatically set up properly (it requires correct avatar set up in `Animator`). If it didn't work for some reason, you'll have to attach model parts transforms manually.
 
