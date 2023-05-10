@@ -4,7 +4,7 @@
 
 It's a little plugin that allows you to dynamically stretch step length in humanoid movement animations. You can use single running animation and change step length dynamically from the code. With this technique you can easily implement character movement with whole range of speeds (e.g. movement for gamepad) without need of speeding up or slowing down the animation (what would result in ridiculously fast or slow steps).
 
-![Alt text](/Documentation/Preview2.gif?raw=true)
+![Alt text](/Documentation/Preview3.gif?raw=true)
 
 ### How it works ###
 
