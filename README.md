@@ -21,14 +21,14 @@ Feet and hand positions are grabbed from the animation, modified according to `S
 
 ![Alt text](/Documentation~/SpeedWarpingComponent.png?raw=true)
 
-6. Update desired movement speed using `SpeedWarping.Spread` property from your code.
+6. Update desired movement speed using `SpeedWarping.Spread` from your code.
 7. [optional] Set custom `LegsOrigin` (explained below)
 
 ### Custom Legs Origin ###
 
-LegsOrigin is center point around which legs rotate (hips), used in calculations of final feet destination. By default legs origin is set to hips transform of the model. This seems correct, however if position of this point is slightly ofset, you can alter legs shape in final pose and likely get nicer results.
+`LegsOrigin` is center point around which legs rotate (hips), used in calculations of final feet destination. By default legs origin is set to hips transform of the model. This seems correct, however if position of this point is slightly ofset, you can alter legs shape in final pose and likely get nicer results.
 
 In order to do this:
 1. Add empty game object.
-2. Place it around hips.
+2. Place it around hips. If you don't make it child of hips it won't be affects by hips animation movement and you'll likely get better results.
 3. Tweak its x and y position - this will change the shape of the legs when they're spread. You can for example make back leg more straight and front leg more bent. Usually position slightly below and behind hips should work fine.
