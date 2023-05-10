@@ -4,7 +4,7 @@
 
 It's a little plugin that allows you to dynamically stretch step length in humanoid movement animations. With this technique you can easily implement character movement with whole range of speeds (e.g. movement for gamepad) without need of speeding up or slowing down the animation (what would result in ridiculously fast or slow steps). Faster movement will simply result in longer steps and slower in shorter steps.
 
-![Alt text](/Documentation/Preview3.gif?raw=true)
+![Alt text](/Documentation~/Preview3.gif?raw=true)
 
 ### How it works ###
 
@@ -18,7 +18,7 @@ Feet and hand positions are grabbed from the animation, modified according to `S
 4. Attach `SpeedWarping` component to the root game object of your character (this game object should have `Animator` component on it).
 5. Verify if model parts transforms were automatically set up properly (it requires correct avatar set up in `Animator`). If it didn't work for some reason, you'll have to attach model parts transforms manually.
 
-![Alt text](/Documentation/SpeedWarpingComponent.png?raw=true)
+![Alt text](/Documentation~/SpeedWarpingComponent.png?raw=true)
 
 6. Update desired movement speed using `SpeedWarping.Spread` property from your code.
 7. [optional] Set custom `LegsOrigin` (explained below)
