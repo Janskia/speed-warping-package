@@ -2,7 +2,7 @@
 
 ### About ###
 
-It's a little plugin that allows you to dynamically stretch step length in humanoid movement animations. You can use single running animation and change step length dynamically from the code. With this technique you can easily implement character movement with whole range of speeds (e.g. movement for gamepad) without need of speeding up or slowing down the animation (what would result in ridiculously fast or slow steps).
+It's a little plugin that allows you to dynamically stretch step length in humanoid movement animations. With this technique you can easily implement character movement with whole range of speeds (e.g. movement for gamepad) without need of speeding up or slowing down the animation (what would result in ridiculously fast or slow steps).
 
 ![Alt text](/Documentation/Preview3.gif?raw=true)
 
@@ -14,16 +14,14 @@ Feet and hand positions are grabbed from the animation, modified according to `S
 
 1. Import the package via Package Manager using git URL: https://github.com/Janskia/speed-warping-package.git
 2. Setup your character model's Rig Animation Type to 'Humanoid'.
-
-![Alt text](/Documentation/AnimationType.png?raw=true)
-
-3. Attach `SpeedWarping` component to the root game object of your character (this game object should also have `Animator` component on it).
-4. Verify if model parts transforms were automatically set up properly (it requires correct avatar set up in `Animator`). If it didn't work for some reason, you'll have to attach model parts transforms manually.
+3. Setup `Animator` on the character to your liking. Attach avatar. Have some running/walking animation.
+4. Attach `SpeedWarping` component to the root game object of your character (this game object should also have `Animator` component on it).
+5. Verify if model parts transforms were automatically set up properly (it requires correct avatar set up in `Animator`). If it didn't work for some reason, you'll have to attach model parts transforms manually.
 
 ![Alt text](/Documentation/SpeedWarpingComponent.png?raw=true)
 
-5. Update desired movement speed using `SpeedWarping.Spread` property from your code.
-[optional] 6. Set custom `LegsOrigin` (explained below)
+6. Update desired movement speed using `SpeedWarping.Spread` property from your code.
+7. [optional] Set custom `LegsOrigin` (explained below)
 
 ### Custom Legs Origin ###
 
