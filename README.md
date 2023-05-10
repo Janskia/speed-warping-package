@@ -2,13 +2,13 @@
 
 ### About ###
 
-It's a little plugin that allows you to dynamically stretch step length in humanoid movement animations. With this technique you can easily implement character movement with whole range of speeds (e.g. movement for gamepad) without need of speeding up or slowing down the animation (what would result in ridiculously fast or slow steps).
+It's a little plugin that allows you to dynamically stretch step length in humanoid movement animations. With this technique you can easily implement character movement with whole range of speeds (e.g. movement for gamepad) without need of speeding up or slowing down the animation (what would result in ridiculously fast or slow steps). Faster movement will result in longer steps and slower in shorter steps.
 
 ![Alt text](/Documentation/Preview3.gif?raw=true)
 
 ### How it works ###
 
-Feet and hand positions are grabbed from the animation, modified according to `SpeedWarping.Spread` parameter and updated position are applied it to the model using IK. Faster movement will result in longer steps and slower in shorter steps. 
+Feet and hand positions are grabbed from the animation, modified according to `SpeedWarping.Spread` parameter and updated position are applied it to the model using IK.
 
 ### Usage guide ###
 
